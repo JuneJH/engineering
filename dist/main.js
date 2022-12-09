@@ -15,7 +15,27 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("console.log(\"start run...\")\n\nconst {a} = __webpack_require__(/*! ./module01 */ \"./src/module01.js\");\n\nconst {b} = __webpack_require__(/*! ./module02 */ \"./src/module02.js\");\n\nconsole.log(\"导出结果\",a,b)\nconsole.log('hello')\n\n//# sourceURL=webpack://engineering/./src/index.js?");
+eval("console.log(\"start run...\")\nconst cssStr = __webpack_require__(/*! ./assets/index.css */ \"./src/assets/index.css\");\nconst imgStr = __webpack_require__(/*! ./assets/nari.jpeg */ \"./src/assets/nari.jpeg\");\nconsole.log(\"输出css\",cssStr);\nconsole.log(\"输出img\",imgStr);\nconst imgDom = document.createElement(\"img\");\nimgDom.src = imgStr;\ndocument.body.appendChild(imgDom)\n\nconst {a} = __webpack_require__(/*! ./module01 */ \"./src/module01.js\");\n\nconst {b} = __webpack_require__(/*! ./module02 */ \"./src/module02.js\");\n\nconsole.log(\"导出结果\",a,b)\nconsole.log('hello')\n\n//# sourceURL=webpack://engineering/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/assets/nari.jpeg":
+/*!******************************!*\
+  !*** ./src/assets/nari.jpeg ***!
+  \******************************/
+/***/ ((module) => {
+
+eval("\n        module.exports = 'icon82dee5e419d6cc3e.jpeg'\n    \n\n//# sourceURL=webpack://engineering/./src/assets/nari.jpeg?");
+
+/***/ }),
+
+/***/ "./src/assets/index.css":
+/*!******************************!*\
+  !*** ./src/assets/index.css ***!
+  \******************************/
+/***/ ((module) => {
+
+eval("\n    const dom = document.createElement(\"style\");\n    dom.innerHTML = `body,html{\n    height:100%;\n    width:100%;\n    background-color: orange;\n}`;\n    document.body.appendChild(dom);\n    module.exports = `body,html{\n    height:100%;\n    width:100%;\n    background-color: orange;\n}`;\n    \n\n//# sourceURL=webpack://engineering/./src/assets/index.css?");
 
 /***/ }),
 
