@@ -1,0 +1,15 @@
+{
+    // 配置预设，预设配置作为数组第二项传入
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "corejs": "3.22"
+            }
+        ]
+    ],
+    // 配置插件
+    "plugins": [
+        "@babel/plugin-transform-typescript"
+    ]
+}

@@ -1,1 +1,122 @@
-(()=>{var o={710:(o,e,l)=>{const n=l(653);console.log("module02 run in module01",n),console.log("module01 run overrr"),o.exports="module01"},653:o=>{console.log("module02 runnn"),o.exports="modlues02"}},e={};function l(n){var r=e[n];if(void 0!==r)return r.exports;var s=e[n]={exports:{}};return o[n](s,s.exports,l),s.exports}(()=>{console.log("玩转webpack");const o=l(710),e=l(653);console.log("module01=>",o),console.log("module02=>",e),console.log("index.js run over!!!")})()})();
+/******/ (function() { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/modules/module01.js":
+/*!*********************************!*\
+  !*** ./src/modules/module01.js ***!
+  \*********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+var module02 = __webpack_require__(/*! ./module02 */ "./src/modules/module02.js");
+console.log("module02 run in module01", module02);
+console.log("module01 run overrr");
+module.exports = "module01";
+
+/***/ }),
+
+/***/ "./src/modules/module02.js":
+/*!*********************************!*\
+  !*** ./src/modules/module02.js ***!
+  \*********************************/
+/***/ (function(module) {
+
+var str = "modlues02";
+console.log("module02 runnn");
+module.exports = str;
+
+/***/ }),
+
+/***/ "./src/modules/modules.ts":
+/*!********************************!*\
+  !*** ./src/modules/modules.ts ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "obj": function() { return /* binding */ obj; }
+/* harmony export */ });
+var obj = {
+  name: "June",
+  age: 18
+};
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+!function() {
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+console.log("玩转webpack");
+var module01 = __webpack_require__(/*! ./modules/module01 */ "./src/modules/module01.js");
+var module02 = __webpack_require__(/*! ./modules/module02 */ "./src/modules/module02.js");
+var obj = __webpack_require__(/*! ./modules/modules.ts */ "./src/modules/modules.ts");
+console.log("module01=>", module01);
+console.log("module02=>", module02);
+console.log("module03=>", obj.obj);
+console.log("index.js run over!!!");
+var fn = function fn() {};
+}();
+/******/ })()
+;
+//# sourceMappingURL=main.js.map
