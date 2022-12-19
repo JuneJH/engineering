@@ -1,5 +1,5 @@
 console.log("玩转webpack");
-
+require("./modules/module03");
 const module01 = require("./modules/module01");
 const module02 = require("./modules/module02");
 
