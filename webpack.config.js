@@ -5,18 +5,24 @@ const lodashMap = require("./dll/lodash.mainfest.json");
 module.exports = {
     mode: "development",
 
+    optimization:{
+        splitChunks:{
+            chunks:"all",
+        }
+    },
+
     plugins: [
         new HtmlWebpackPlugin({
             template: "./public/index.html"
         }),
-        new webpack.DllReferencePlugin({
-            manifest: jqueryMap
-        }),
-        new webpack.DllReferencePlugin({
-            manifest: lodashMap
-        }),
+        // new webpack.DllReferencePlugin({
+        //     manifest: jqueryMap
+        // }),
+        // new webpack.DllReferencePlugin({
+        //     manifest: lodashMap
+        // }),
     ],
     devServer: {
         open: true,
-    }
+    },
 }
